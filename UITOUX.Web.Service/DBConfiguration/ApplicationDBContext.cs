@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using UITOUX.Web.Service.Models;
 
 namespace UITOUX.Web.Service.DBConfiguration
 {
-    public class ApplicationDBContext  : DbContext
+    public class ApplicationDBContext : DbContext
     {
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options)
         {
@@ -12,5 +13,7 @@ namespace UITOUX.Web.Service.DBConfiguration
         {
             base.OnModelCreating(modelBuilder);
         }
+
+        public DbSet<Language> languages { get; set; }
     }
 }
