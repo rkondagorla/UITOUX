@@ -39,6 +39,7 @@ namespace UITOUX.Web.Service
             services.AddMvc().AddXmlSerializerFormatters();
 
             services.AddScoped<ILanguageService, LanguageService>();
+            services.AddScoped<ICurrencyService, CurrencyService>();
 
             services.AddSwaggerGen(c =>
             {
