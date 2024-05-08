@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34302.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITOUX.Web.Service", "UITOUX.Web.Service\UITOUX.Web.Service.csproj", "{4CAB5B61-7301-4559-929D-6DDE3BEA478F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITOUX.Web.UI", "UITOUX.Web.UI\UITOUX.Web.UI.csproj", "{7300D038-62A4-40CF-BFD2-0FBF9E430C83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4CAB5B61-7301-4559-929D-6DDE3BEA478F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CAB5B61-7301-4559-929D-6DDE3BEA478F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CAB5B61-7301-4559-929D-6DDE3BEA478F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7300D038-62A4-40CF-BFD2-0FBF9E430C83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7300D038-62A4-40CF-BFD2-0FBF9E430C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7300D038-62A4-40CF-BFD2-0FBF9E430C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7300D038-62A4-40CF-BFD2-0FBF9E430C83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
