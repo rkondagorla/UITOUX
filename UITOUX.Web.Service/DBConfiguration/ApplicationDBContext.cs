@@ -17,5 +17,6 @@ namespace UITOUX.Web.Service.DBConfiguration
         public DbSet<Language> languages { get; set; }
         public DbSet<Currency> currencies { get; set; }
         public DbSet<Category> categories { get; set; }
+        public DbSet<Banner> banners { get; set; }
     }
 }
