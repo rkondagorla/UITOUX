@@ -8,7 +8,8 @@ namespace UITOUX.Web.Service.Models
         public long BannerId { get; set; }
         public string? Code { get; set; }
         public string? Description { get; set; }
-
+        public DateTimeOffset? StartDate { get; set; }
+        public DateTimeOffset? EndDate { get; set; }
         public long? CreatedBy { get; set; }
         public DateTimeOffset? CreatedOn { get; set; }
 

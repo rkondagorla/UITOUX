@@ -55,6 +55,8 @@ namespace UITOUX.Web.Service.Repository
             {
                 banner.Code = _banner.Code;
                 banner.Description = _banner.Description;
+                banner.StartDate = _banner.StartDate;
+                banner.EndDate= _banner.EndDate;
                 banner.CreatedOn = DateTime.Now;
                 banner.CreatedBy = _banner.CreatedBy;
                 banner.ModifiedOn = DateTime.Now;
