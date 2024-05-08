@@ -5,6 +5,8 @@ using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using System.Text;
 using UITOUX.Web.Service.DBConfiguration;
+using UITOUX.Web.Service.Interfaces;
+using UITOUX.Web.Service.Repository;
 
 namespace UITOUX.Web.Service
 {
@@ -36,6 +38,7 @@ namespace UITOUX.Web.Service
 
             services.AddMvc().AddXmlSerializerFormatters();
 
+            services.AddScoped<ILanguageService, LanguageService>();
 
             services.AddSwaggerGen(c =>
             {
