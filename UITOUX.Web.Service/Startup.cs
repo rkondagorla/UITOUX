@@ -40,6 +40,9 @@ namespace UITOUX.Web.Service
 
             services.AddScoped<ILanguageService, LanguageService>();
             services.AddScoped<ICurrencyService, CurrencyService>();
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IBannerService, BannerService>();
+            services.AddScoped<IBannerItemService, BannerItemService>();
 
             services.AddSwaggerGen(c =>
             {
