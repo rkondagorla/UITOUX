@@ -13,6 +13,8 @@ namespace UITOUX.Web.Service.Models
 
         public long? ParentCategoryId { get; set; }
 
+        public string ImagePath { get; set; }
+
         public long? CreatedBy { get; set; }
 
         public DateTimeOffset? CreatedOn { get; set; }
