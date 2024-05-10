@@ -27,17 +27,15 @@ namespace UITOUX.Web.Service.Repository
 
         public async Task<List<Brand>> GetAllBrand()
         {
-            return await dBContext.brands.Where(x => x.IsActive).ToListAsync();
+            return await dBContext.brands.Where(x => x.IsActive).Include(x => x.models).ToListAsync();
         }
 
         public async Task<Brand> GetBrand(long brandId)
         {
-            var brand = await dBContext.brands.FindAsync(brandId);
-            if (brand != null)
-            {
-                return brand;
-            }
-            return null;
+            var responce = await dBContext.brands.Where(x => x.BrandId == brandId).FirstOrDefaultAsync();
+
+            return responce;
+
         }
 
         public async Task<bool> InsertBrand(Brand brand)
