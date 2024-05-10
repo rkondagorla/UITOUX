@@ -20,5 +20,6 @@ namespace UITOUX.Web.Service.DBConfiguration
         public DbSet<Banner> banners { get; set; }
         public DbSet<BannerItem>bannerItems { get; set; }
         public DbSet<Brand> brands { get; set; }
+        public DbSet<Model> models { get; set; }
     }
 }

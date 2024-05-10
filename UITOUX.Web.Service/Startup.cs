@@ -44,6 +44,7 @@ namespace UITOUX.Web.Service
             services.AddScoped<IBannerService, BannerService>();
             services.AddScoped<IBannerItemService, BannerItemService>();
             services.AddScoped<IBrandService, BrandService>();
+            services.AddScoped<IModelService, ModelService>();
 
             services.AddSwaggerGen(c =>
             {

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UITOUX.Web.Service.DBConfiguration;
 
@@ -10,9 +11,11 @@ using UITOUX.Web.Service.DBConfiguration;
 namespace UITOUX.Web.Service.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240510035501_Brandtable")]
+    partial class Brandtable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.0");
@@ -246,57 +249,6 @@ namespace UITOUX.Web.Service.Migrations
                     b.HasKey("LanguageId");
 
                     b.ToTable("languages");
-                });
-
-            modelBuilder.Entity("UITOUX.Web.Service.Models.Model", b =>
-                {
-                    b.Property<long>("ModelId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<long?>("BrandId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Code")
-                        .HasColumnType("TEXT");
-
-                    b.Property<long?>("CreatedBy")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTimeOffset?>("CreatedOn")
-                        .HasColumnType("TEXT");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<long?>("ModifiedBy")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTimeOffset?>("ModifiedOn")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("ModelId");
-
-                    b.HasIndex("BrandId");
-
-                    b.ToTable("models");
-                });
-
-            modelBuilder.Entity("UITOUX.Web.Service.Models.Model", b =>
-                {
-                    b.HasOne("UITOUX.Web.Service.Models.Brand", "brand")
-                        .WithMany("models")
-                        .HasForeignKey("BrandId");
-
-                    b.Navigation("brand");
-                });
-
-            modelBuilder.Entity("UITOUX.Web.Service.Models.Brand", b =>
-                {
-                    b.Navigation("models");
                 });
 #pragma warning restore 612, 618
         }
